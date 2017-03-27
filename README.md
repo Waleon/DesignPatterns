@@ -1,2 +1,2 @@
-# DesignPattern
-C++ Design Pattern
+# DesignPatterns
+C++ Design Patterns
