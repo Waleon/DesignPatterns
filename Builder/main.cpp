@@ -2,6 +2,10 @@
 #include "director.h"
 #include <string>
 
+#ifndef SAFE_DELETE
+#define SAFE_DELETE(p) { if(p){delete(p); (p)=NULL;} }
+#endif
+
 int main()
 {
     Direcror *pDirecror = new Direcror();
@@ -29,11 +33,11 @@ int main()
     cout << "Ram: " << pYogaComputer->GetRam() << endl;
     cout << "VideoCard: " << pYogaComputer->GetVideoCard() << endl;
 
-    delete pThinkPadComputer;
-    delete pYogaComputer;
-    delete pTPBuilder;
-    delete pYogaBuilder;
-    delete pDirecror;
+	SAFE_DELETE(pThinkPadComputer);
+	SAFE_DELETE(pYogaComputer);
+	SAFE_DELETE(pTPBuilder);
+	SAFE_DELETE(pYogaBuilder);
+	SAFE_DELETE(pDirecror);
 
 	getchar();
 

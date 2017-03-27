@@ -1,7 +1,8 @@
 #include "concrete_prototype.h"
-#include <iostream>
 
-using namespace std;
+#ifndef SAFE_DELETE
+#define SAFE_DELETE(p) { if(p){delete(p); (p)=NULL;} }
+#endif
 
 int main()
 {
@@ -15,9 +16,9 @@ int main()
     pSWK1->Play();
     pSWK2->Play();
 
-    delete pSWK1;
-    delete pSWK2;
-    delete pSWK;
+	SAFE_DELETE(pSWK1);
+	SAFE_DELETE(pSWK2);
+	SAFE_DELETE(pSWK);
 
 	getchar();
 
