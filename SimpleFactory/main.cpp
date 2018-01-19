@@ -29,7 +29,7 @@ int main()
 
     SAFE_DELETE(pCar);
 
-   // getchar();
+    getchar();
 
     return 0;
 }
