@@ -7,10 +7,10 @@
 class IHandler
 {
 public:
-	IHandler() { m_pSuccessor = NULL; }
+	IHandler() { m_pSuccessor = nullptr; }
 	virtual ~IHandler() {}
 	void SetSuccessor(IHandler *successor) { m_pSuccessor = successor; }
-	virtual void HandleRequest(float days) = 0;
+	virtual void HandleRequest(int days) = 0;
 
 protected:
 	IHandler *m_pSuccessor;  // ∫ÛºÃ’ﬂ

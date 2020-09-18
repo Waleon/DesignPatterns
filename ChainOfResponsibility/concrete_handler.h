@@ -7,13 +7,10 @@
 class Manager : public IHandler
 {
 public:
-	Manager() {}
-	~Manager() {}
-	virtual void HandleRequest(float days) override {
+	void HandleRequest(int days) override {
 		if (days <= 1) {
 			std::cout << "Manager 批准了 " << days << " 天假" << std::endl;
-		}
-		else {
+		} else {
 			m_pSuccessor->HandleRequest(days);
 		}
 	}
@@ -23,13 +20,10 @@ public:
 class Director : public IHandler
 {
 public:
-	Director() {}
-	~Director() {}
-	virtual void HandleRequest(float days) override {
+	void HandleRequest(int days) override {
 		if (days <= 3) {
 			std::cout << "Director 批准了 " << days << " 天假" << std::endl;
-		}
-		else {
+		} else {
 			m_pSuccessor->HandleRequest(days);
 		}
 	}
@@ -39,13 +33,10 @@ public:
 class CEO : public IHandler
 {
 public:
-	CEO() {}
-	~CEO() {}
-	virtual void HandleRequest(float days) override {
+	void HandleRequest(int days) override {
 		if (days <= 7) {
 			std::cout << "CEO 批准了 " << days << " 天假" << std::endl;
-		}
-		else {
+		} else {
 			std::cout << "给你放长假，以后不用来上班啦！" << std::endl;
 		}
 	}

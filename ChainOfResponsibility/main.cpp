@@ -1,7 +1,7 @@
 #include "concrete_handler.h"
 
 #ifndef SAFE_DELETE
-#define SAFE_DELETE(p) { if(p){delete(p); (p)=NULL;} }
+#define SAFE_DELETE(p) { if(p){delete p; p=nullptr;} }
 #endif
 
 int main()
