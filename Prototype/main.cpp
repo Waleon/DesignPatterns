@@ -1,7 +1,15 @@
+/****************************************
+* @file    IHandler
+* @brief   原型模式
+* @author  微信号：iwaleon
+* @wechat  微信公众号：高效程序员
+* @date    2017/10/01
+****************************************/
+
 #include "concrete_prototype.h"
 
 #ifndef SAFE_DELETE
-#define SAFE_DELETE(p) { if(p){delete(p); (p)=NULL;} }
+#define SAFE_DELETE(p) { if(p){delete p; p=nullptr;} }
 #endif
 
 int main()

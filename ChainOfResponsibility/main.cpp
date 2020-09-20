@@ -1,3 +1,11 @@
+/****************************************
+* @file    IHandler
+* @brief   职责链模式
+* @author  微信号：iwaleon
+* @wechat  微信公众号：高效程序员
+* @date    2017/10/01
+****************************************/
+
 #include "concrete_handler.h"
 
 #ifndef SAFE_DELETE
