@@ -2,10 +2,10 @@
 #define IMPLEMENTOR_H
 
 // µçÆ÷
-class IElectricalEquipment
+class IEquipment
 {
 public:
-	virtual ~IElectricalEquipment() {}
+	virtual ~IEquipment() {}
 
 	// ´ò¿ª
 	virtual void PowerOn() = 0;

@@ -7,7 +7,7 @@
 class ISwitch
 {
 public:
-	ISwitch(IElectricalEquipment *ee) { m_pEe = ee; }
+	ISwitch(IEquipment *equipment) { m_pEquipment = equipment; }
 	virtual ~ISwitch() {}
 
 	// ´ò¿ªµçÆ÷
@@ -17,7 +17,7 @@ public:
 	virtual void Off() = 0;
 
 protected:
-	IElectricalEquipment *m_pEe;
+	IEquipment *m_pEquipment;
 };
 
 #endif // ABSTRACTION_H

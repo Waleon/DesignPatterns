@@ -8,18 +8,19 @@
 class PullChainSwitch : public ISwitch
 {
 public:
-	PullChainSwitch(IElectricalEquipment *ee) : ISwitch(ee) {}
+	PullChainSwitch(IEquipment *equipment) 
+		: ISwitch(equipment) {}
 
 	// 用拉链式开关打开电器
-	virtual void On() override {
+	void On() override {
 		std::cout << "Switch on the equipment with a pull chain switch." << std::endl;
-		m_pEe->PowerOn();
+		m_pEquipment->PowerOn();
 	}
 
 	// 用拉链式开关关闭电器
-	virtual void Off() override {
+	void Off() override {
 		std::cout << "Switch off the equipment with a pull chain switch." << std::endl;
-		m_pEe->PowerOff();
+		m_pEquipment->PowerOff();
 	}
 };
 
@@ -27,18 +28,19 @@ public:
 class TwoPositionSwitch : public ISwitch
 {
 public:
-	TwoPositionSwitch(IElectricalEquipment *ee) : ISwitch(ee) {}
+	TwoPositionSwitch(IEquipment *equipment)
+		: ISwitch(equipment) {}
 
 	// 用两位开关打开电器
-	virtual void On() override {
+	void On() override {
 		std::cout << "Switch on the equipment with a two-position switch." << std::endl;
-		m_pEe->PowerOn();
+		m_pEquipment->PowerOn();
 	}
 
 	// 用两位开关关闭电器
-	virtual void Off() override {
+	void Off() override {
 		std::cout << "Switch off the equipment with a two-position switch." << std::endl;
-		m_pEe->PowerOff();
+		m_pEquipment->PowerOff();
 	}
 };
 

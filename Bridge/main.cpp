@@ -2,14 +2,14 @@
 #include "concrete_implementor.h"
 
 #ifndef SAFE_DELETE
-#define SAFE_DELETE(p) { if(p){delete(p); (p)=NULL;} }
+#define SAFE_DELETE(p) { if(p){delete p; p=nullptr;} }
 #endif
 
 int main()
 {
 	// 创建电器 - 电灯、风扇
-	IElectricalEquipment *light = new Light();
-	IElectricalEquipment *fan = new Fan();
+	IEquipment *light = new Light();
+	IEquipment *fan = new Fan();
 
 	/**
 	* 创建开关 - 拉链式开关、两位开关
