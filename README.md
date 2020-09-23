@@ -8,4 +8,6 @@
 - 微信号：iwaleon
 - 微信公众号：高效程序员
 
-更多干货，请关注微信公众号「高效程序员」，不要太惊喜哦~
+![微信公众号](https://raw.githubusercontent.com/Waleon/DesignPatterns/master/assets/qrcode.jpg)
+
+更多干货，请扫码关注微信公众号，不要太惊喜哦~
