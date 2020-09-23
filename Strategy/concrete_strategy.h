@@ -1,28 +1,42 @@
 #ifndef CONCRETE_STRATEGY_H
 #define CONCRETE_STRATEGY_H
 
+/****************************************
+* @file    IHandler
+* @brief   策略模式
+* @author  微信号：iwaleon
+* @wechat  微信公众号：高效程序员
+* @date    2017/10/01
+****************************************/
+
 #include "strategy.h"
 #include <iostream>
 
-// 骑自行车
-class BikeStrategy : public IStrategy
+// 自行车
+class Bike : public ITransport
 {
 public:
-	virtual void Travel() override { std::cout << "Travel by bike" << std::endl; }
+	void Run() override { 
+		std::cout << "By bike" << std::endl;
+	}
 };
 
-// 开车
-class CarStrategy : public IStrategy
+// 汽车
+class Car : public ITransport
 {
 public:
-	virtual void Travel() override { std::cout << "Travel by car" << std::endl; }
+	void Run() override { 
+		std::cout << "By car" << std::endl;
+	}
 };
 
-// 坐火车
-class TrainStrategy : public IStrategy
+// 火车
+class Train : public ITransport
 {
 public:
-	virtual void Travel() override { std::cout << "Travel by train" << std::endl; }
+	void Run() override {
+		std::cout << "By train" << std::endl;
+	}
 };
 
 #endif // CONCRETE_STRATEGY_H
