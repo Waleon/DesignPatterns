@@ -19,7 +19,8 @@ public:
 		if (days <= 1) {
 			std::cout << "Manager 批准了 " << days << " 天假" << std::endl;
 		} else {
-			m_pSuccessor->HandleRequest(days);
+			if (nullptr != m_pSuccessor)
+				m_pSuccessor->HandleRequest(days);
 		}
 	}
 };
@@ -32,7 +33,8 @@ public:
 		if (days <= 3) {
 			std::cout << "Director 批准了 " << days << " 天假" << std::endl;
 		} else {
-			m_pSuccessor->HandleRequest(days);
+			if (nullptr != m_pSuccessor)
+				m_pSuccessor->HandleRequest(days);
 		}
 	}
 };

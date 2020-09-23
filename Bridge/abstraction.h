@@ -25,7 +25,7 @@ public:
 	virtual void Off() = 0;
 
 protected:
-	IEquipment *m_pEquipment;
+	IEquipment *m_pEquipment = nullptr;
 };
 
 #endif // ABSTRACTION_H

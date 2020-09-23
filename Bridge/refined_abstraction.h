@@ -22,13 +22,17 @@ public:
 	// 用拉链式开关打开电器
 	void On() override {
 		std::cout << "Switch on the equipment with a pull chain switch." << std::endl;
-		m_pEquipment->PowerOn();
+
+		if (nullptr != m_pEquipment)
+			m_pEquipment->PowerOn();
 	}
 
 	// 用拉链式开关关闭电器
 	void Off() override {
 		std::cout << "Switch off the equipment with a pull chain switch." << std::endl;
-		m_pEquipment->PowerOff();
+
+		if (nullptr != m_pEquipment)
+			m_pEquipment->PowerOff();
 	}
 };
 
@@ -42,13 +46,17 @@ public:
 	// 用两位开关打开电器
 	void On() override {
 		std::cout << "Switch on the equipment with a two-position switch." << std::endl;
-		m_pEquipment->PowerOn();
+
+		if (nullptr != m_pEquipment)
+			m_pEquipment->PowerOn();
 	}
 
 	// 用两位开关关闭电器
 	void Off() override {
 		std::cout << "Switch off the equipment with a two-position switch." << std::endl;
-		m_pEquipment->PowerOff();
+
+		if (nullptr != m_pEquipment)
+			m_pEquipment->PowerOff();
 	}
 };
 

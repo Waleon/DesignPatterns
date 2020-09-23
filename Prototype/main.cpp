@@ -15,18 +15,18 @@
 int main()
 {
     // 孙悟空
-    Monkey *pSWK = new SunWuKong("Qi Tian Da Sheng");
+    Monkey *swk = new SunWuKong("Qi Tian Da Sheng");
 
     // 克隆猴子猴孙
-    Monkey *pSWK1 = pSWK->Clone();
-    Monkey *pSWK2 = pSWK1->Clone();
+    Monkey *swk1 = swk->Clone();
+    Monkey *swk2 = swk1->Clone();
 
-    pSWK1->Play();
-    pSWK2->Play();
+	swk1->Play();
+	swk2->Play();
 
-	SAFE_DELETE(pSWK1);
-	SAFE_DELETE(pSWK2);
-	SAFE_DELETE(pSWK);
+	SAFE_DELETE(swk2);
+	SAFE_DELETE(swk1);
+	SAFE_DELETE(swk);
 
 	getchar();
 
