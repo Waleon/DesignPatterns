@@ -1,5 +1,5 @@
 /****************************************
-* @file    IHandler
+* @file    main
 * @brief   职责链模式
 * @author  微信号：iwaleon
 * @wechat  微信公众号：高效程序员

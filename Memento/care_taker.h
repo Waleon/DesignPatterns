@@ -1,35 +1,38 @@
+/****************************************
+* @file    PandoraBox
+* @brief   备忘录模式
+* @author  微信号：iwaleon
+* @wechat  微信公众号：高效程序员
+* @date    2017/10/01
+****************************************/
+
 #ifndef CARE_TAKER_H
 #define CARE_TAKER_H
 
 #include "originator.h"
-#include <iostream>
 #include <vector>
 
 // 月光宝盒
 class PandoraBox
 {
 public:
-	PandoraBox(Life *life)
-		: m_pLife(life) {}
-
+	PandoraBox(Life *life) : m_pLife(life) {}
 	~PandoraBox() {
-		for (int i = 0; i < m_history.size(); i++) {
-			delete m_history.at(i);
+		for (auto itr = m_history.begin(); itr != m_history.end(); ++itr) {
+			delete *itr;
 		}
 		m_history.clear();
 	}
 
 	// 保存备份
 	void Save() {
-		std::cout << "Save ..." << std::endl;;
 		m_history.push_back(m_pLife->CreateMemento());
 	}
 
-	// 穿越至上一时刻
+	// 穿越至某一时刻（随机取时间）
 	void Undo() {
-		std::cout << "Undo ..." << std::endl;;
-		m_pLife->SetMemento(m_history.back());
-		m_history.pop_back();
+		int index = rand() % m_history.size();
+		m_pLife->SetMemento(m_history[index]);
 	}
 
 private:
