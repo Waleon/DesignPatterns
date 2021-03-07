@@ -9,9 +9,9 @@ using namespace std;
 class Computer
 {
 public:
-    void SetmCpu(string cpu) { m_strCpu = cpu;}
-    void SetmMainboard(string mainboard) { m_strMainboard = mainboard; }
-    void SetmRam(string ram) { m_strRam = ram; }
+    void SetCpu(string cpu) { m_strCpu = cpu;}
+    void SetMainboard(string mainboard) { m_strMainboard = mainboard; }
+    void SetRam(string ram) { m_strRam = ram; }
     void SetVideoCard(string videoCard) { m_strVideoCard = videoCard; }
 
     string GetCPU() { return m_strCpu; }

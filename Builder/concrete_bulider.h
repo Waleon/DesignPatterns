@@ -8,11 +8,11 @@ class ThinkPadBuilder : public IBuilder
 {
 public:
     ThinkPadBuilder() { m_pComputer = new Computer(); }
-    void BuildCpu() { m_pComputer->SetmCpu("i5-6200U"); }
-    void BuildMainboard() { m_pComputer->SetmMainboard("Intel DH57DD"); }
-    void BuildRam() { m_pComputer->SetmRam("DDR4"); }
-    void BuildVideoCard()  { m_pComputer->SetVideoCard("NVIDIA Geforce 920MX"); }
-    Computer* GetResult() { return m_pComputer; }
+    void BuildCpu() override { m_pComputer->SetCpu("i5-6200U"); }
+    void BuildMainboard() override { m_pComputer->SetMainboard("Intel DH57DD"); }
+    void BuildRam() override  { m_pComputer->SetRam("DDR4"); }
+    void BuildVideoCard() override { m_pComputer->SetVideoCard("NVIDIA Geforce 920MX"); }
+    Computer* GetResult() override { return m_pComputer; }
 
 private:
     Computer *m_pComputer;
@@ -23,11 +23,11 @@ class YogaBuilder : public IBuilder
 {
 public:
     YogaBuilder() { m_pComputer = new Computer(); }
-    void BuildCpu() { m_pComputer->SetmCpu("i7-7500U"); }
-    void BuildMainboard() { m_pComputer->SetmMainboard("Intel DP55KG"); }
-    void BuildRam() { m_pComputer->SetmRam("DDR5"); }
-    void BuildVideoCard()  { m_pComputer->SetVideoCard("NVIDIA GeForce 940MX"); }
-    Computer* GetResult() { return m_pComputer; }
+    void BuildCpu() override  { m_pComputer->SetCpu("i7-7500U"); }
+    void BuildMainboard() override { m_pComputer->SetMainboard("Intel DP55KG"); }
+    void BuildRam() override { m_pComputer->SetRam("DDR5"); }
+    void BuildVideoCard() override { m_pComputer->SetVideoCard("NVIDIA GeForce 940MX"); }
+    Computer* GetResult() override { return m_pComputer; }
 
 private:
     Computer *m_pComputer;
