@@ -1,6 +1,6 @@
 # C++ 设计模式
 
-归档 23 种 [C++ 设计模式](https://waleon.blog.csdn.net/article/details/66974516 "C++ 设计模式")，所有示例均基于 VS2015。
+归档 23 种 [C++ 设计模式](https://waleon.blog.csdn.net/article/details/66974516 "C++ 设计模式")
 
 # 更多精彩
 
