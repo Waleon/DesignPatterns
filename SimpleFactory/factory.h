@@ -3,27 +3,27 @@
 
 #include "concrete_product.h"
 
+enum class CAR_TYPE {
+    BENZ,  // 奔驰汽车
+    BMW,   // 宝马汽车
+    AUDI   // 奥迪汽车
+};
+
 // 工厂
 class Factory
 {
 public:
-    enum CAR_TYPE {
-       BENZ_CAR,  // 奔驰汽车
-       BMW_CAR,  // 宝马汽车
-       AUDI_CAR  // 奥迪汽车
-    };
-
     // 生产汽车
     ICar* CreateCar(CAR_TYPE type) {
-        ICar *pCar = NULL;
+        ICar *pCar = nullptr;
         switch(type) {
-        case CAR_TYPE::BENZ_CAR:
+        case CAR_TYPE::BENZ:
             pCar = new BenzCar();  // 奔驰汽车
             break;
-        case CAR_TYPE::BMW_CAR:
+        case CAR_TYPE::BMW:
             pCar = new BmwCar();  // 宝马汽车
             break;
-        case CAR_TYPE::AUDI_CAR:
+        case CAR_TYPE::AUDI:
             pCar = new AudiCar();  // 奥迪汽车
             break;
         default:

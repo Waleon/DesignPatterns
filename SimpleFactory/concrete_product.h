@@ -7,7 +7,7 @@
 class BenzCar : public ICar
 {
 public:
-    string Name() {
+    string Name() override {
         return "Benz Car";
     }
 };
@@ -16,7 +16,7 @@ public:
 class BmwCar : public ICar
 {
 public:
-    string Name() {
+    string Name() override {
         return "Bmw Car";
     }
 };
@@ -25,7 +25,7 @@ public:
 class AudiCar : public ICar
 {
 public:
-    string Name() {
+    string Name() override {
         return "Audi Car";
     }
 };
